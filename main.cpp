@@ -5,6 +5,8 @@
 #include <typeinfo>
 #include <bitset>
 
+#include "./encode.h"
+
 using namespace std;
 
 cv::Mat fullWhiteImage = cv::imread("./full_white_image.png");
@@ -18,10 +20,6 @@ void displayImage(cv::Mat image){
     cv::waitKey(0);//wait until user press any key
 }
 
-
-int modifyValue(int val){
-
-}
 
 void printRGBValues(cv::Mat image){
 
@@ -41,28 +39,38 @@ void printRGBValues(cv::Mat image){
 
 
 int main(){
-    if (fullWhiteImage.empty())
-        cout << "Image can't be open by OpenCV\n";
-    else{
-        cout << "Image can be open by OpenCV\n";
+    // if (fullWhiteImage.empty())
+    //     cout << "Image can't be open by OpenCV\n";
+    // else{
+    //     cout << "Image can be open by OpenCV\n";
 
-        // cout << fullWhiteImage.size;
-    }
+    //     // cout << fullWhiteImage.size;
+    // }
 
     
-    // printRGBValues(TwoColorsImage);
+    // // printRGBValues(TwoColorsImage);
 
 
-    // cv::imshow("qwertyu",TwoColorsImage);
-    // cv::destroyWindow("Photoframe");//close the window and release allocate memory//
-    // cv::waitKey(0);//wait till user press any key
+    // // cv::imshow("qwertyu",TwoColorsImage);
+    // // cv::destroyWindow("Photoframe");//close the window and release allocate memory//
+    // // cv::waitKey(0);//wait till user press any key
 
-    int a = 16;
-    bitset<8> b;
+    // int a = 16;
+    // bitset<8> b;
 
-    b = a;
-    cout << (b << 2);
+    // b = a;
+    // cout << (b << 2);
 
 
+    // encode(fullWhiteImage);
+
+
+    cout << toBinary('A');
+
+    cout << endl;   
+    cout << endl;
+    cout << endl;
+
+    cout << toBinary(65);
 
 }

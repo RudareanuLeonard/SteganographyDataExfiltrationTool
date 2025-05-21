@@ -8,10 +8,11 @@ TARGET = main
 
 # Source files
 SRCS = main.cpp
+ENCODE = encode.cpp
 
 # Build target
 $(TARGET): $(SRCS)
-	$(CXX) $(CXXFLAGS) $(SRCS) $(LDFLAGS) -o $(TARGET)
+	$(CXX) $(CXXFLAGS) $(SRCS) $(ENCODE) $(LDFLAGS) -o $(TARGET)
 
 # Clean target
 clear:
