@@ -10,7 +10,10 @@ template <typename T>
 std::bitset<8> toBinary(T c) {
     return std::bitset<8>(static_cast<int>(c));
 }
+
 int modifyValue(int val);
 
+int binaryOp(bitset<8> v1, bitset<8> v2);
 
-void encode(cv::Mat image);
+void encode(cv::Mat &image, string messages);
+
