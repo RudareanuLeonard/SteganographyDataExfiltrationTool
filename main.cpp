@@ -13,7 +13,7 @@ cv::Mat fullWhiteImage = cv::imread("./full_white_image.png");
 
 cv::Mat TwoColorsImage = cv::imread("./two_colors_image.png");
 
-const string message = "HelloQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ!";
+const string message = "ABCD";
 
 
 void displayImage(cv::Mat image){
@@ -42,23 +42,27 @@ void printRGBValues(cv::Mat image){
 
 
 int main(){
-    if (fullWhiteImage.empty())
-        cout << "Image can't be open by OpenCV\n";
-    else{
-        cout << "Image can be open by OpenCV\n";
+    // if (fullWhiteImage.empty())
+    //     cout << "Image can't be open by OpenCV\n";
+    // else{
+    //     cout << "Image can be open by OpenCV\n";
 
-        // cout << fullWhiteImage.size;
-    }
+    //     // cout << fullWhiteImage.size;
+    // }
 
     
-    // printRGBValues(TwoColorsImage);
+    // // printRGBValues(TwoColorsImage);
 
 
+
+    encode(fullWhiteImage, message);
+    
     cv::imshow("qwertyu",fullWhiteImage);
     cv::destroyWindow("Photoframe");//close the window and release allocate memory//
     cv::waitKey(0);//wait till user press any key
 
-    encode(fullWhiteImage, message);
-    
+    // std:bitset<8> q = toBinary(message[2]);
+    // // 01000011
+    // cout << q << " q[0] = " << q[0] << " q[7] = " << q[7];
 
 }
